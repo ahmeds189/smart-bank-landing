@@ -1,6 +1,7 @@
 @use "../style/breakpoints" as *;
 
 div.hero {
+  padding: 2rem 0;
   .wrapper {
     display: grid;
     align-items: center;
