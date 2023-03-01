@@ -1,0 +1,58 @@
+@use "../style/breakpoints" as *;
+
+section.step-content {
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  gap: 3rem;
+  overflow: hidden;
+  height: 35rem;
+
+  @include breakpoint("large") {
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    & > div {
+      max-width: 20rem;
+    }
+
+    img {
+      top: 50%;
+    }
+  }
+  img {
+    position: relative;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      span {
+        background: var(--clr-brand-light);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        font-weight: 600;
+        font-family: "Times New Roman", Times, serif;
+        svg {
+          width: 23px;
+          height: 23px;
+        }
+
+        path:last-of-type {
+          fill: var(--clr-dark);
+          stroke: var(--clr-dark);
+          stroke-width: 1.5;
+        }
+      }
+    }
+  }
+}

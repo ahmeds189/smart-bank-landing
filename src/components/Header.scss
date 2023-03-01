@@ -1,0 +1,61 @@
+@use "../style/breakpoints" as *;
+
+header {
+  background: var(--clr-white);
+  height: 4rem;
+  display: flex;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 3rem;
+    }
+
+    h3 {
+      display: none;
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-left: 10px;
+      span {
+        font-weight: 700;
+      }
+      @include breakpoint("medium") {
+        display: block;
+      }
+    }
+  }
+
+  nav {
+    display: none;
+    @include breakpoint("small") {
+      display: block;
+    }
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+  .mobile-menu {
+    background: transparent;
+    border: 0;
+    font-size: 2.5rem;
+    outline: 0;
+    @include breakpoint("small") {
+      display: none;
+    }
+    &:focus {
+      border-radius: 5px;
+      box-shadow: inset 0 0 0 3px black;
+    }
+  }
+}

@@ -1,0 +1,67 @@
+@use "../style/breakpoints" as *;
+
+section.gradient {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 4rem;
+
+  @include breakpoint("medium") {
+    gap: 1rem;
+    img {
+      width: 20rem;
+      margin-left: auto;
+    }
+  }
+
+  div {
+    width: 100%;
+  }
+
+  .one {
+    color: var(--clr-white);
+
+    h3 {
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+    p {
+      font-size: 0.9rem;
+    }
+
+    @include breakpoint("medium") {
+      h3 {
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+    @include breakpoint("large") {
+      max-width: 80%;
+      h3 {
+        font-size: 1.8rem;
+      }
+      p {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  a {
+    color: var(--clr-white);
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    width: fit-content;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      gap: 0.5rem;
+    }
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@use "../style/mixin" as *;
+
+// btn theme (background - text color - outline)
+
+.cta {
+  @include btn-theme(var(--clr-brand), var(--clr-white));
+  &:hover {
+    box-shadow: 0 0 8px 5px var(--clr-brand-light);
+  }
+}
+
+.cta-border {
+  @include btn-theme(none, var(--clr-black), $border: true);
+}
+
+.cta-secondray {
+  @include btn-theme(var(--clr-black), var(--clr-white));
+}
+
+.cta-secondray-green {
+  @include btn-theme(var(--clr-brand-secondray), var(--clr-black));
+}

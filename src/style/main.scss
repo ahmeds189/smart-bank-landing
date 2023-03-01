@@ -1,0 +1,110 @@
+@use "./breakpoints" as *;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-gray: hsl(180, 3%, 93%);
+  --clr-brand: hsl(247, 99%, 63%);
+  --clr-brand-light: hsl(247, 100%, 89%);
+  --clr-brand-secondray: hsl(86, 100%, 71%);
+  --clr-dark: hsl(247, 61%, 11%);
+  --clr-black: hsl(0, 0%, 4%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  color: var(--clr-dark);
+  background: var(--clr-gray);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root {
+  isolation: isolate;
+}
+
+a {
+  text-decoration: none;
+  color: var(--clr-dark);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.container {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 0.6rem;
+}
+
+section {
+  background: var(--clr-white);
+  border-radius: 12px;
+  padding: 32px 20px;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  margin-bottom: 1.8rem;
+  @include breakpoint("medium") {
+    font-size: 1.8rem;
+  }
+}
+.two-sections {
+  display: grid;
+  gap: 0.8rem;
+
+  @media (min-width: 577px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

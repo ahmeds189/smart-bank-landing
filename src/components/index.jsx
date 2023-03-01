@@ -1,0 +1,12 @@
+export { default as Header } from "./Header";
+export { default as Sidebar } from "./Sidebar";
+export { default as Hero } from "./Hero";
+export { default as Button } from "./Button";
+export { default as MainFeature } from "./MainFeature";
+export { default as StepHeader } from "./StepHeader";
+export { default as Feature } from "./Feature";
+export { default as StepContent } from "./StepContent";
+export { default as Security } from "./Security";
+export { default as MoneyFeature } from "./MoneyFeature";
+export { default as Gradient } from "./Gradient";
+export { default as Footer } from "./Footer";

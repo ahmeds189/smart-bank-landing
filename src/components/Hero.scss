@@ -1,0 +1,72 @@
+@use "../style/breakpoints" as *;
+
+div.hero {
+  .wrapper {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    gap: 1rem;
+    .wrapper-text {
+      max-width: 28rem;
+      h2 {
+        font-weight: 600;
+        font-size: 2.5rem;
+        line-height: 3rem;
+        @include breakpoint("medium") {
+          font-size: 3.3rem;
+          line-height: 3.5rem;
+        }
+      }
+      .intro-text {
+        font-size: 1rem;
+        line-height: 1.5625rem;
+        margin: 1.4rem 0;
+      }
+      .buttons-wrapper {
+        display: flex;
+        gap: 4px;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+        button {
+          padding: 8px;
+          border-radius: 4px;
+          display: flex;
+          gap: 6px;
+          align-items: center;
+          text-align: left;
+          svg {
+            width: 20px;
+            height: 26px;
+          }
+          div {
+            line-height: 1;
+            p {
+              font-size: 0.8rem;
+              font-weight: 400;
+            }
+            h6 {
+              font-size: 1.1rem;
+            }
+          }
+        }
+      }
+      .rateing {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        span {
+          display: flex;
+          font-weight: 400;
+          font-size: 1rem;
+          line-height: 2.1875rem;
+          letter-spacing: 0.006em;
+          svg {
+            fill: #ffbc58;
+          }
+        }
+      }
+    }
+    .wrapper-img {
+    }
+  }
+}

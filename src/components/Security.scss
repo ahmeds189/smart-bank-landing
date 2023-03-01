@@ -1,0 +1,32 @@
+@use "../style/breakpoints" as *;
+
+section.security {
+  flex-direction: column;
+  padding-block: 1rem;
+  gap: 2rem;
+  @include breakpoint("large") {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  div {
+    max-width: 20rem;
+  }
+
+  a {
+    color: var(--clr-brand);
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    width: fit-content;
+    transition: all 0.2s ease-in-out;
+    margin-top: 1rem;
+
+    &:hover {
+      gap: 0.5rem;
+    }
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
