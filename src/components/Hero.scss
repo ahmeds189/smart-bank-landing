@@ -8,7 +8,9 @@ div.hero {
     grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
     gap: 1rem;
     .wrapper-text {
-      max-width: 28rem;
+      @include breakpoint("medium") {
+        max-width: 28rem;
+      }
       h2 {
         font-weight: 600;
         font-size: 2.5rem;
